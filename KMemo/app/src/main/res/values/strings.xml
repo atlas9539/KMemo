@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">KMemo</string>
+    <string name="hicreaby">HI! GREABY!!!!</string>
+    <string name="hiatlas">HI! ATLAS!!!</string>
+    <string name="activity_name1">Creaby\'s Memo</string>
+    <string name="activity_name2">ATLAS\' MEMO</string>
 </resources>
