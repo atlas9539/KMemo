@@ -7,6 +7,7 @@ import together.study.kmemo.R
 
 class CreabyActivity : Activity() {
 
+    val TAG ="Creaby"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
