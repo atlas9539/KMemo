@@ -1,6 +1,7 @@
 package together.study.kmemo.activity
 
 import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.os.Environment
 import android.util.Log
@@ -48,17 +49,34 @@ class CMemoActivity : Activity() {
             Toast.makeText(this, contents.text.toString(), Toast.LENGTH_LONG).show()
 
             try {
-                val file = File(Environment.getExternalStorageDirectory().absolutePath + File.separator + title + ".txt")
+                val file = File(Environment.getExternalStorageDirectory().absolutePath, title + ".txt")
 //                var buffer = ByteArray(1024)
 //                var read: Int = 0
 
                 var path:String? = file.toString()
 
-//                out = FileOutputStream(saveFile)
-                val saveFile = OutputStreamWriter(openFileOutput(path, Activity.MODE_PRIVATE))
-                saveFile.write(content)
-                saveFile.flush()
-                saveFile.close()
+//                out = FileOutputStream(path)
+
+                val temp = "abc"
+
+//                OutputStream fos = new FileOutputStream(path)
+
+//                val saveFile = OutputStreamWriter(openFileOutput(path, Activity.MODE_PRIVATE))
+//                FileOutputStream(path).use { output ->
+//                    this.write(content)
+//                }
+
+                Log.e("KMemo", "bla2 : " + title)
+                this.openFileOutput(title, Context.MODE_PRIVATE).use {
+                    it.write(temp.toByteArray())
+                }
+
+//                val saveFile = OutputStreamWriter(openFileOutput(path, Activity.MODE_PRIVATE))
+//                saveFile.write(content)
+//                saveFile.flush()
+//                saveFile.close()
+
+                Toast.makeText(this, "complete", Toast.LENGTH_LONG).show()
 
             } catch(e : IOException) {
                 e.printStackTrace()
