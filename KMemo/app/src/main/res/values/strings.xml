@@ -4,4 +4,10 @@
     <string name="hiatlas">HI! ATLAS!!!</string>
     <string name="activity_name1">Creaby\'s Memo</string>
     <string name="activity_name2">ATLAS\' MEMO</string>
+    <string name="hello_world">Welcome to Kotlin World !!</string>
+
+
+    <!--CMemoActivity Layout-->
+    <string name="cmemo_edit_title_hint">제목을 입력하세요.</string>
+    <string name="cmemo_edit_contents_hint">내용을 입력하세요.</string>
 </resources>

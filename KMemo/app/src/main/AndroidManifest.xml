@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="together.study.kmemo">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,6 +21,7 @@
         </activity>
         <activity android:name=".activity.AtlasActivity"/>
         <activity android:name=".activity.CreabyActivity"/>
+        <activity android:name=".activity.CMemoActivity" />
     </application>
 
 </manifest>

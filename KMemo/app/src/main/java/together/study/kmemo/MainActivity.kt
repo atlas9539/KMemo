@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import together.study.kmemo.activity.AtlasActivity
+import together.study.kmemo.activity.CMemoActivity
 import together.study.kmemo.activity.CreabyActivity
 
 class MainActivity : AppCompatActivity(){
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity(){
 
         cmemo.setOnClickListener{
             Toast.makeText(this,"go to Creaby",Toast.LENGTH_SHORT).show()
-            val intent = Intent(this,CreabyActivity::class.java)
+            val intent = Intent(this,CMemoActivity::class.java)
             startActivity(intent)
 
         }
